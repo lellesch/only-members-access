@@ -1,0 +1,54 @@
+{
+    "autoload": {
+        "classmap": [
+          "includes/"
+        ]
+    },
+    "autoload-dev": {
+        "classmap": [
+          "includes/"
+        ]
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "wp-coding-standards/wpcs": "^3.1",
+        "squizlabs/php_codesniffer": "^3.10",
+        "sirbrillig/phpcs-variable-analysis": "2.11",
+        "phpstan/phpstan": "^1.11"
+    },
+    "scripts": {
+        "build-plugin": [
+            "@pre-archive-cmd",
+            "bash -c 'rm -rf build-release/ && PLUGIN_NAME=$(basename $(pwd)) && mkdir -p build-release/$PLUGIN_NAME && rsync -av --exclude=\".*\" --exclude=\"build-release\" --exclude=\"node_modules\" --exclude=\".gitignore\" --exclude=\"composer.json\" --exclude=\"composer.lock\" --exclude=\"tests\" --exclude=\"package.json\" --exclude=\"package-lock.json\" ./ build-release/$PLUGIN_NAME && cd build-release && zip -r $PLUGIN_NAME.zip $PLUGIN_NAME'",
+            "@after-archive-cmd"
+        ],
+        "clean-folders": [
+            "bash -c 'rm -rf build-release/'",
+            "bash -c 'rm -rf build/'",
+            "bash -c 'rm -rf node_modules/'",
+            "bash -c 'rm -rf vendor/'"
+        ],
+        "lint": "phpcs --standard=WordPress --exclude=Squiz.Commenting.VariableComment,Squiz.Commenting.ClassComment,Squiz.Commenting.FileComment,Squiz.Commenting.FunctionComment includes/",
+        "lint-fix": "phpcbf --standard=WordPress includes/",
+        "analyze": "phpstan analyse -l 6 includes/",
+        "autoload": [
+            "@composer dump-autoload"
+        ],
+        "pre-archive-cmd": [
+            "@composer install --no-dev --optimize-autoloader",
+            "@composer dump-autoload -o"
+        ],
+        "after-archive-cmd": [
+            "@composer install"
+        ]
+    },
+    "config": {
+        "platform-check": "php-only",
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "extra": {
+    }
+}
