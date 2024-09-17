@@ -37,7 +37,11 @@ class Init_Core {
 
 		$this->load_dependencies();
 		$this->set_locale();
-		$this->define_admin_hooks();
+
+		if ( is_admin() ) {
+			$this->define_admin_hooks();
+		}
+
 		$this->define_public_hooks();
 	}
 
@@ -66,7 +70,6 @@ class Init_Core {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
-		$this->loader->add_action( 'admin_menu', $plugin_admin, 'add_plugin_admin_menu' );
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'add_react_settings_page' );
 
 		// Additional hooks can be added here.
@@ -79,8 +82,16 @@ class Init_Core {
 
 		$plugin_public = new Frontend\Frontend( $this->get_plugin_name(), $this->get_plugin_prefix_name(), $this->get_version() );
 
+		$plugin_rest_api = new Rest_Api();
+
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+
+		$this->loader->add_action( 'rest_api_init', $plugin_rest_api, 'rest_api_init' );
+
+		$this->loader->add_action('wp_login', $plugin_public, 'wp_login_redirect',10,2);
+		$this->loader->add_action('template_redirect', $plugin_public, 'restrict_access_to_logged_in_users');
+		$this->loader->add_filter('rest_authentication_errors', $plugin_public, 'rest_authentication_errors' );
 	}
 
 	/**

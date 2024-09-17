@@ -34,4 +34,20 @@ class Helper {
 
 		check_admin_referer( $action_name );
 	}
+
+
+	public static function set_default_settings(): void {
+
+		$options = get_option( 'only_members_access_settings', array() );
+
+		if ( empty( $options ) ) {
+			$options = array(
+				'enable_redirection_after_login' => 0,
+				'url_redirection_after_login'    => '',
+				'rest_api_access'                => 'only_logged_in',
+				'post_exceptions_ids'            => array(),
+			);
+			update_option( 'only_members_access_settings', $options );
+		}
+	}
 }

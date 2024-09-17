@@ -1,95 +1,41 @@
 === Plugin Name ===
-Contributors: (this should be a list of wordpress.org userid's)
-Donate link: https://example.com/
-Tags: tag1, tag2
-Requires at least: 4.7
-Tested up to: 5.4
-Stable tag: 4.3
-Requires PHP: 7.0
+Contributors: LetoWPDev
+Donate link:
+Tags: membership, access control, user restriction, login protection, content restriction
+Requires at least: 6.0
+Tested up to: 6.6
+Stable tag: 1.0.0
+Requires PHP: 8.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
+# Only Members Access
 
-== Description ==
+**Only Members Access** ist ein leistungsstarkes WordPress-Plugin, das den Zugriff auf deine Website einschränkt und nur registrierten, eingeloggten Benutzern erlaubt, Inhalte zu sehen. Es ist ideal für Websites, die exklusive Inhalte anbieten und sicherstellen möchten, dass nur berechtigte Benutzer Zugriff darauf haben.
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+## Beschreibung
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+**Only Members Access** ist ein leistungsstarkes WordPress-Plugin, das den Zugriff auf deine Website einschränkt und nur registrierten, eingeloggten Benutzern erlaubt, Inhalte zu sehen. Es ist ideal für Websites, die exklusive Inhalte anbieten und sicherstellen möchten, dass nur berechtigte Benutzer Zugriff darauf haben.
 
-A few notes about the sections above:
+Mit flexiblen Optionen kannst du bestimmte Seiten oder Beiträge von der Zugriffsbeschränkung ausnehmen, um öffentliche Inhalte bereitzustellen, während der Rest der Seite geschützt bleibt. Du kannst auch festlegen, auf welche Bereiche oder Funktionen deiner Seite eingeloggte Benutzer Zugriff haben.
 
-* "Contributors" is a comma separated list of wordpress.org usernames
-* "Tags" is a comma separated list of tags that apply to the plugin
-* "Requires at least" is the lowest version that the plugin will work on
-* "Tested up to" is the highest version that you've *successfully used to test the plugin*
-* Stable tag must indicate the Subversion "tag" of the latest stable version
+Die einfache Konfiguration macht es für Administratoren leicht, Benutzer zu verwalten und Zugriffskontrollen effizient zu steuern.
 
-Note that the `readme.txt` value of stable tag is the one that is the defining one for the plugin.  If the `/trunk/readme.txt` file says that the stable tag is `4.3`, then it is `/tags/4.3/readme.txt` that'll be used for displaying information about the plugin.
+Das Plugin bietet außerdem Funktionen wie benutzerdefinierte Weiterleitungen nach der Anmeldung und die Anpassung von Anmeldeformularen, um das Benutzererlebnis zu optimieren. **Only Members Access** bietet eine robuste Lösung für Websites, die eine sichere und exklusive Umgebung für ihre Mitglieder schaffen möchten.
 
-If you develop in trunk, you can update the trunk `readme.txt` to reflect changes in your in-development version, without having that information incorrectly disclosed about the current stable version that lacks those changes -- as long as the trunk's `readme.txt` points to the correct stable tag.
+## ❤️ Du magst Only Members Access? ##
 
-If no stable tag is provided, your users may not get the correct version of your code.
+- Besuche unsere [Website](https://letowp.de/?utm_source=wordpress.org&utm_medium=only-members-access)
+- Oder bewerte uns auf [WordPress](https://wordpress.org/support/plugin/only-members-access/reviews/?rate=5#new-post)
 
-== Frequently Asked Questions ==
+## Installation
 
-= A question that someone might have =
+1. Lade das Plugin-Verzeichnis in den `/wp-content/plugins/` Ordner hoch.
+2. Aktiviere das Plugin über das 'Plugins' Menü in WordPress.
+3. Konfiguriere die Einstellungen im Admin-Bereich unter **Einstellungen -> Only Members Access**.
 
-An answer to that question.
+## FAQ
 
-= What about foo bar? =
+**Kann ich bestimmte Seiten von der Zugriffsbeschränkung ausnehmen?**
 
-Answer to foo bar dilemma.
-
-== Screenshots ==
-
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Screenshots are stored in the /assets directory.
-2. This is the second screen shot
-
-== Changelog ==
-
-= 1.0 =
-* A change since the previous version.
-* Another change.
-
-= 0.5 =
-* List versions from most recent at top to oldest at bottom.
-
-== Upgrade Notice ==
-
-= 1.0 =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
-
-= 0.5 =
-This version fixes a security related bug.  Upgrade immediately.
-
-== A brief Markdown Example ==
-
-Markdown is what the parser uses to process much of the readme file.
-
-[markdown syntax]: https://daringfireball.net/projects/markdown/syntax
-
-Ordered list:
-
-1. Some feature
-1. Another feature
-1. Something else about the plugin
-
-Unordered list:
-
-* something
-* something else
-* third thing
-
-Links require brackets and parenthesis:
-
-Here's a link to [WordPress](https://wordpress.org/ "Your favorite software") and one to [Markdown's Syntax Documentation][markdown syntax]. Link titles are optional, naturally.
-
-Blockquotes are email style:
-
-> Asterisks for *emphasis*. Double it up  for **strong**.
-
-And Backticks for code:
-
-`<?php code(); ?>`
+Ja, du kannst in den Einstellungen bestimmte Seiten oder Beiträge definieren, die öffentlich zugänglich bleiben sollen.

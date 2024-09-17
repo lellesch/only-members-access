@@ -2,6 +2,8 @@
 
 namespace LetoOnlyMembersAccess\Frontend;
 
+use WP_Error;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -85,5 +87,51 @@ class Frontend {
 		if ( file_exists( ONLY_MEMBERS_ACCESS_DIR_PATH . 'assets/js/frontend.js' ) ) {
 			wp_enqueue_script( $this->plugin_name, $script_path, array( 'jquery' ), $this->version, false );
 		}
+	}
+
+	public function rest_authentication_errors( $access ) {
+
+		$options = get_option( 'only_members_access_settings' );
+
+		if ( $options['rest_api_access'] === 'only_logged_in' && ! is_user_logged_in() ) {
+			return new WP_Error(
+				'rest_not_logged_in',
+				esc_html__( 'Zur Nutzung der REST-API ist es notwendig, dass man angemeldet ist.', 'only-members-access' ),
+				array( 'status' => 401 )
+			);
+		}
+
+		return $access;
+	}
+
+	public function restrict_access_to_logged_in_users(): void {
+		$options             = get_option( 'only_members_access_settings' );
+		$post_exceptions_ids = empty( $options['post_exceptions_ids'] ) ? array() : $options['post_exceptions_ids'];
+
+		if ( ! is_user_logged_in() ) {
+			if ( is_singular() && in_array( get_the_ID(), $post_exceptions_ids ) ) {
+				return;
+			}
+
+			wp_redirect( wp_login_url() );
+			exit;
+		}
+	}
+
+	public function wp_login_redirect( $user_login, $user ): void {
+
+		if ( in_array( 'administrator', $user->roles ) ) {
+			return;
+		}
+
+		$options = get_option( 'only_members_access_settings' );
+
+		if ( $options['enable_redirection_after_login'] !== 1 || empty( $options['url_redirection_after_login'] ) ) {
+			return;
+		}
+
+		wp_safe_redirect( esc_url_raw( $options['url_redirection_after_login'] ) );
+		exit;
+
 	}
 }

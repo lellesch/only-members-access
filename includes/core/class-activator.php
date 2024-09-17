@@ -67,6 +67,8 @@ class Activator {
 		 * The plugin is now safely activated.
 		 * Perform your activation actions here.
 		 */
+
+		Helper::set_default_settings();
 	}
 
 	/**

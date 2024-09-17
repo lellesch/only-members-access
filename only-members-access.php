@@ -9,12 +9,12 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Only Members Access
- * Description:       Only Members Access
+ * Description:       Only Members Access beschränkt den Zugriff auf deine Website auf registrierte und eingeloggte Benutzer.
  * Version:           1.0.0
  * Author:            LetowWPDev
- * Requires at least: 6.5
+ * Requires at least: 6.0
  * Requires PHP:      8.1
- * Author URI:        https://letowp.de
+ * Author URI:        https://letowp.de/?utm_source=plugin&utm_medium=only-members-access
  * Text Domain:       only-members-access
  * Domain Path:       /languages
  * License:           GPL-2.0+

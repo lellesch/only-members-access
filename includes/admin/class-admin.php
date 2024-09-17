@@ -121,52 +121,24 @@ class Admin {
 	}
 
 	/**
-	 * Add a menu page to the WordPress admin dashboard.
-	 *
-	 * @since    1.0.0
-	 */
-	public function add_plugin_admin_menu(): void {
-		add_menu_page(
-			__( 'Test Menu', 'only-members-access' ),
-			__( 'Test Menu', 'only-members-access' ),
-			'manage_options',
-			$this->plugin_prefix_name . 'test',
-			array( $this, 'render_test_page' ),
-			'dashicons-admin-generic'
-		);
-	}
-
-	/**
-	 * Render the admin page.
-	 *
-	 * @since    1.0.0
-	 */
-	public function render_test_page(): void {
-		echo '<div class="wrap">';
-		echo '<h1>' . esc_html__( 'Test Page', 'only-members-access' ) . '</h1>';
-		echo '<p>' . esc_html__( 'This is a placeholder for the admin page content.', 'only-members-access' ) . '</p>';
-		echo '</div>';
-	}
-
-	/**
 	 * Adds a React-based settings page to the WordPress admin area.
 	 *
 	 * @return void
 	 */
 	public function add_react_settings_page(): void {
 		add_options_page(
-			__( 'Plugin Settings', 'only-members-access' ), // The title to be displayed in the browser window for this page.
-			__( 'My Singleton Plugin', 'only-members-access' ), // The text to be used for the menu.
-			'manage_options', // The capability required for this menu to be displayed to the user.
-			'only-members-access-settings', // The unique identifier of this menu item.
-			array( $this, 'display_options_page' ) // The function to be called to render the menu's page content.
+			__( 'Only Members Access Einstellungen', 'only-members-access' ),
+			__( 'Only Members Access', 'only-members-access' ),
+			'manage_options',
+			'only-members-access-settings',
+			array( $this, 'display_options_page' )
 		);
 	}
 
 	public function display_options_page(): void {
 		printf(
 			'<div class="wrap" id="only-members-access-settings">%s</div>',
-			esc_html__( 'Loading…', 'only-members-access' )
+			esc_html__( 'Wird geladen…', 'only-members-access' )
 		);
 	}
 }
