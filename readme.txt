@@ -1,18 +1,19 @@
-=== Plugin Name ===
+=== Only Members Access ===
 Contributors: LetoWPDev
 Donate link:
 Tags: membership, access control, user restriction, login protection, content restriction
 Requires at least: 6.0
 Tested up to: 6.6
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Requires PHP: 8.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 # Only Members Access
 
-**Only Members Access** ist ein leistungsstarkes WordPress-Plugin, das den Zugriff auf deine Website einschränkt und nur registrierten, eingeloggten Benutzern erlaubt, Inhalte zu sehen. Es ist ideal für Websites, die exklusive Inhalte anbieten und sicherstellen möchten, dass nur berechtigte Benutzer Zugriff darauf haben.
+Only Members Access beschränkt den Zugriff auf Inhalte nur auf registrierte und eingeloggte Benutzer.
 
+== Description ==
 ## Beschreibung
 
 **Only Members Access** ist ein leistungsstarkes WordPress-Plugin, das den Zugriff auf deine Website einschränkt und nur registrierten, eingeloggten Benutzern erlaubt, Inhalte zu sehen. Es ist ideal für Websites, die exklusive Inhalte anbieten und sicherstellen möchten, dass nur berechtigte Benutzer Zugriff darauf haben.

@@ -19,7 +19,7 @@
     "scripts": {
         "build-plugin": [
             "@pre-archive-cmd",
-            "bash -c 'rm -rf build-release/ && PLUGIN_NAME=$(basename $(pwd)) && mkdir -p build-release/$PLUGIN_NAME && rsync -av --exclude=\".*\" --exclude=\"build-release\" --exclude=\"node_modules\" --exclude=\"src\" --exclude=\".gitignore\" --exclude=\"composer.json\" --exclude=\"composer.lock\" --exclude=\"tests\" --exclude=\"package.json\" --exclude=\"package-lock.json\" ./ build-release/$PLUGIN_NAME && cd build-release && zip -r $PLUGIN_NAME.zip $PLUGIN_NAME'",
+            "bash -c 'rm -rf build-release/ && PLUGIN_NAME=$(basename $(pwd)) && mkdir -p build-release/$PLUGIN_NAME && rsync -av --exclude=\".*\" --exclude=\"build-release\" --exclude=\"node_modules\" --exclude=\".gitignore\" --exclude=\"composer.lock\" --exclude=\"README.md\" --exclude=\"tests\" --exclude=\"package-lock.json\" ./ build-release/$PLUGIN_NAME && cd build-release && zip -r $PLUGIN_NAME.zip $PLUGIN_NAME'",
             "@after-archive-cmd"
         ],
         "clean-folders": [
