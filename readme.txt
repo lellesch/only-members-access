@@ -1,7 +1,7 @@
 === Only Members Access ===
 Contributors: LetoWPDev
 Donate link:
-Tags: membership, access control, user restriction, login protection, content restriction
+Tags: only members, members, access control, user restriction, content restriction
 Requires at least: 6.0
 Tested up to: 6.7
 Stable tag: 1.0.2
