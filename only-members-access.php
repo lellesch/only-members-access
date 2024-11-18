@@ -10,7 +10,7 @@
  * @wordpress-plugin
  * Plugin Name:       Only Members Access
  * Description:       Only Members Access beschränkt den Zugriff auf deine Website auf registrierte und eingeloggte Benutzer.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            LetowWPDev
  * Requires at least: 6.0
  * Requires PHP:      8.1
@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 define( 'ONLY_MEMBERS_ACCESS_NAME', 'only-members-access' );
 define( 'ONLY_MEMBERS_ACCESS_PREFIX', 'only_members_access_' );
-define( 'ONLY_MEMBERS_ACCESS_VERSION', '1.0.1' );
+define( 'ONLY_MEMBERS_ACCESS_VERSION', '1.0.2' );
 define( 'ONLY_MEMBERS_ACCESS_DIR_PATH', plugin_dir_path( __FILE__ ) );
 define( 'ONLY_MEMBERS_ACCESS_DIR_URL', plugin_dir_url( __FILE__ ) );
 define( 'ONLY_MEMBERS_ACCESS_BASENAME', plugin_basename( __FILE__ ) );
