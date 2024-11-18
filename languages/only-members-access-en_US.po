@@ -5,113 +5,120 @@ msgstr ""
 "Project-Id-Version: Only Members Access 1.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/only-members-"
 "access\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2024-11-18T05:26:57+00:00\n"
+"PO-Revision-Date: 2024-11-18 06:30+0100\n"
+"Last-Translator: Thomas Lellesch\n"
+"Language-Team: \n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-11-18T05:26:57+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.8.1\n"
+"X-Generator: Poedit 3.5\n"
 "X-Domain: only-members-access\n"
 
 #. Plugin Name of the plugin
 #: includes/admin/class-admin.php:131
 msgid "Only Members Access"
-msgstr ""
+msgstr "Only Members Access"
 
 #. Description of the plugin
 msgid ""
 "Only Members Access beschränkt den Zugriff auf deine Website auf "
 "registrierte und eingeloggte Benutzer."
 msgstr ""
+"Only Members Access restricts access to your site to registered and "
+"logged in users."
 
 #. Author of the plugin
 msgid "LetowWPDev"
-msgstr ""
+msgstr "LetowWPDev"
 
 #. Author URI of the plugin
 msgid "https://letowp.de/"
-msgstr ""
+msgstr "https://letowp.de/"
 
 #: includes/admin/class-admin.php:130
 msgid "Only Members Access Einstellungen"
-msgstr ""
+msgstr "Only Members Access Settings"
 
 #: includes/admin/class-admin.php:141
 msgid "Wird geladen…"
-msgstr ""
+msgstr "Loading..."
 
 #: includes/frontend/class-frontend.php:99
 msgid "Zur Nutzung der REST-API ist es notwendig, dass man angemeldet ist."
-msgstr ""
+msgstr "To use the REST API, it is necessary to be logged in."
 
 #: build/index.js:1
 msgid "Einstellungen gespeichert."
-msgstr ""
+msgstr "Settings saved."
 
 #: build/index.js:1
 msgid "Fehler beim speichern."
-msgstr ""
+msgstr "Error saving."
 
 #: build/index.js:1
 msgid "Zugang für alle verfügbar"
-msgstr ""
+msgstr "Access available to all"
 
 #: build/index.js:1
 msgid "Zugang nur für angemeldete Benutzer"
-msgstr ""
+msgstr "Access only for logged in users"
 
 #: build/index.js:1
 msgid "Registrierung"
-msgstr ""
+msgstr "Sign Up"
 
 #: build/index.js:1
 msgid "Jeder kann sich registrieren"
-msgstr ""
+msgstr "Anyone can register"
 
 #: build/index.js:1
 msgid ""
 "Dies ist eine Standard-WordPress-Option, die hier platziert wird, um eine "
 "einfache Änderung zu ermöglichen."
 msgstr ""
+"This is a default WordPress option that is placed here to allow for easy "
+"modification."
 
 #: build/index.js:1
 msgid "Login"
-msgstr ""
+msgstr "Login"
 
 #: build/index.js:1
 msgid "Weiterleitung nach dem Login aktivieren"
-msgstr ""
+msgstr "Enable forwarding after login"
 
 #: build/index.js:1
 msgid ""
 "Hier kann die URL angegeben werden, zu der man nach der erfolgreichen "
 "Anmeldung weitergeleitet wird."
 msgstr ""
+"Here you can enter the URL to which you will be redirected after "
+"successful registration."
 
 #: build/index.js:1
 msgid "REST-API"
-msgstr ""
+msgstr "REST API"
 
 #: build/index.js:1
 msgid "Seiten / Beitrag Ausnahmen"
-msgstr ""
+msgstr "Pages/Post Exceptions"
 
 #: build/index.js:1
 msgid "Seiten-/Beitrags-IDs"
-msgstr ""
+msgstr "Page/Post IDs"
 
 #: build/index.js:1
 msgid ""
 "Hier können Seiten-IDs eingegeben werden, die öffentlich zugänglich sein "
 "sollen."
-msgstr ""
+msgstr "Page IDs can be entered here, which should be publicly accessible."
 
 #: build/index.js:1
 msgid "Wird geladen..."
-msgstr ""
+msgstr "Will be loaded ..."
 
 #: build/index.js:1
 msgid "Speichern"
-msgstr ""
+msgstr "Save"

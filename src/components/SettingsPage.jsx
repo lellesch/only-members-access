@@ -2,12 +2,11 @@ import {
     __experimentalHeading as Heading,
     __experimentalVStack as VStack,
     __experimentalSpacer as Spacer,
-    __experimentalText as Text,
     Card,
     CardHeader,
     CardBody,
     Button,
-    TextControl, Panel, PanelBody, PanelRow,
+    TextControl,
 
 } from '@wordpress/components';
 import {__} from "@wordpress/i18n";

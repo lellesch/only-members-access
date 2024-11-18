@@ -118,6 +118,8 @@ class Admin {
 			),
 			$asset['version'],
 		);
+
+		wp_set_script_translations( 'only-members-access-settings-script', 'only-members-access', ONLY_MEMBERS_ACCESS_DIR_PATH. 'languages' );
 	}
 
 	/**

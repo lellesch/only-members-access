@@ -1,21 +1,24 @@
 {
 	"dependencies": {
-		"@wordpress/api-fetch": "^7.7.0",
-		"@wordpress/components": "^28.7.0",
-		"@wordpress/data": "^10.7.0",
-		"@wordpress/dom-ready": "^4.7.0",
-		"@wordpress/element": "^6.7.0",
-		"@wordpress/i18n": "^5.7.0",
-		"@wordpress/icons": "^10.7.0",
-		"@wordpress/notices": "^5.7.0"
+		"@wordpress/api-fetch": "^7.12.0",
+		"@wordpress/components": "^28.12.0",
+		"@wordpress/data": "^10.12.0",
+		"@wordpress/dom-ready": "^4.12.0",
+		"@wordpress/element": "^6.12.0",
+		"@wordpress/i18n": "^5.12.0",
+		"@wordpress/icons": "^10.12.0",
+		"@wordpress/notices": "^5.12.0"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^29.0.0"
+		"@wordpress/scripts": "^30.5.0"
 	},
 	"scripts": {
+		"packages-update": "wp-scripts packages-update",
 		"build": "wp-scripts build",
 		"start": "wp-scripts start",
 		"format": "wp-scripts format",
-		"lint:js": "wp-scripts lint-js"
+		"lint:js": "wp-scripts lint-js",
+		"makepot": "wp i18n make-pot . languages/$(basename $PWD).pot --skip-js --exclude=src,vendor,build-release,node_modules,_dist-release && wp i18n make-pot . languages/js-admin.pot --skip-php --include=build && wp i18n make-pot . languages/js-public.pot --skip-php --include=build/public && msgcat --use-first languages/$(basename $PWD).pot languages/js-admin.pot languages/js-public.pot -o languages/$(basename $PWD).pot && rm languages/js-admin.pot && rm languages/js-public.pot",
+		"makejson": "wp i18n make-json languages/$(basename $PWD)-en_US.po --no-purge"
 	}
 }
