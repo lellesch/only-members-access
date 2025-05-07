@@ -3,8 +3,8 @@ Contributors: LetoWPDev
 Donate link:
 Tags: only members, members, access control, user restriction, content restriction
 Requires at least: 6.0
-Tested up to: 6.7
-Stable tag: 1.0.2
+Tested up to: 6.8
+Stable tag: 1.0.3
 Requires PHP: 8.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
